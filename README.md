@@ -15,4 +15,4 @@ Link til hunde
 [link](https://www.omlet.us/guide/dogs/choosing_the_right_dog_for_you/large_dog_breeds)
 
 
-[link](https://www.omlet.us/guide/dogs/choosing_the_right_dog_for_you/large_dog_breeds)
+[link](https://www.goodhousekeeping.com/life/pets/advice/g1921/large-dog-breeds/)
