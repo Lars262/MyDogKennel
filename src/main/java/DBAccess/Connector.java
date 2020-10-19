@@ -24,7 +24,7 @@ public class Connector {
     public static Connection connection() throws ClassNotFoundException, SQLException {
         if ((singleton == null) || singleton.isClosed()) {
             setDBCredentials();
-            Class.forName( "com.mysql.cj.jdbc.Driver" );
+            Class.forName("com.mysql.jdbc.Driver");
             singleton = DriverManager.getConnection( URL, USERNAME, PASSWORD );
         }
         return singleton;
@@ -32,6 +32,7 @@ public class Connector {
 
     public static void setDBCredentials() {
         String deployed = System.getenv("DEPLOYED");
+        deployed = null;
         if (deployed != null){
             // Prod: hent variabler fra setenv.sh i Tomcats bin folder
             URL = System.getenv("JDBC_CONNECTION_STRING");
@@ -39,9 +40,10 @@ public class Connector {
             PASSWORD = System.getenv("JDBC_PASSWORD");
         } else {
             // Localhost
-            URL = "jdbc:mysql://localhost:3306/useradmin?serverTimezone=CET&useSSL=false";
+            //URL = "jdbc:mysql://localhost:3306/useradmin?serverTimezone=CET&useSSL=false";
+            URL = "jdbc:mysql://localhost:3306/kennell2?serverTimezone=CET&useSSL=false";
             USERNAME = "root";
-            PASSWORD = "root";
+            PASSWORD = "root123";
         }
     }
 
