@@ -14,12 +14,10 @@
     <body>
 
 
-        <h1>Hello ${sessionScope.email} </h1>
+    <h1>Resultatet</h1>
+        <p>${requestScope.breed}</p>
+        <p>${requestScope.area}</p>
+        <p>${requestScope.msg}</p>
 
-
-
-
-
-        You are now logged in as a customer of our wonderful site.
     </body>
 </html>
